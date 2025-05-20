@@ -1,0 +1,286 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.navbar-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-menu a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.profile-container {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto 0;
+  background: white;
+  border-radius: 20px;
+  padding: 11rem;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem;
+
+  /* NEW STYLES FOR BOX EFFECT */
+
+}
+
+
+.profile-photo {
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.ttext {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.intro-text {
+  font-size: 2rem;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: gray;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn.outline {
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+}
+
+.btn.filled {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #444;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .ttext {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .buttons, .social-icons {
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-menu a {
+    margin: 0.5rem 0;
+  }
+
+  .profile-container {
+    padding: 2rem 1rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
